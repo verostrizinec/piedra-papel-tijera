@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+
+* { /* reseteo */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: "Single Day", cursive;
+}
+
+:root { /* variables de colores */
+    --clr-blue: #050469;
+    --clr-white: #FFF;
+    --clr-light: #99affa;
+}
