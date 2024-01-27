@@ -148,4 +148,8 @@ button {
         padding: 0;
         padding-top: 6rem;
     }
+
+    .arma img {
+        width: 100%;
+    }
 }
