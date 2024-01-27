@@ -1,14 +1,138 @@
-@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 * { /* reseteo */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: "Single Day", cursive;
+    font-family: "Nunito", sans-serif;
 }
 
 :root { /* variables de colores */
-    --clr-blue: #050469;
-    --clr-white: #FFF;
-    --clr-light: #99affa;
+    --clr-blue: #050469; /* fondo */
+    --clr-beige: #a1a0a0; /*  */
+    --clr-light: #d4defd; /* fondo titulo */
 }
+
+body {
+    background-color: var(--clr-blue);
+    color: var(--clr-beige);
+}
+
+header {
+    display: flex;
+    flex-direction: column; /* de esta manera separo titulo y subtitulo en columna */
+    align-items: center; /* se alinea al centro */
+    justify-content: center;
+    padding: 1rem;
+    background-color: var(--clr-beige);
+    color: var(--clr-blue);
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10rem;
+    text-align: center; /* alinea los textos al centro */
+}
+
+.instrucciones {
+    margin-bottom: 2rem;
+}
+
+.marcador {
+    background-color: var(--clr-light);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    position: relative;
+    display: flex;
+    align-items: center; /* centra jugador y computadora en el medio */
+    color: var(--clr-beige);
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.marcador .nombre {
+    position: absolute; /* si pongo solo position absolute aca no pasa nada, tengo q poner relative en marcador */
+    color: var(--clr-beige);
+    background-color: var(--clr-blue);
+    line-height: 1;
+    padding: .5rem;
+    border-radius: .5rem;
+    border: 2px solid var(--clr-light);
+}
+
+.marcador .nombre-jugador {
+    right: 85%; /* se ubica a la izquierda de su contenedor */
+}
+
+.marcador .nombre-computadora {
+    left: 85%;
+}
+
+.marcador .puntos {
+    font-size: 1.6rem;
+}
+
+.elegi-tu-arma {
+    margin-bottom: 2rem;
+}
+
+.elegi-tu-arma h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: .5rem;
+}
+
+.armas {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.arma img {
+    background-color: var(--clr-light);
+    border-radius: .8rem;
+}
+
+.arma {
+    border: 0;
+    cursor: pointer;
+}
+
+button {
+    background-color: var(--clr-light);
+    border-radius: .8rem;
+}
+
+.mensaje {
+    margin-bottom: 2rem;
+    line-height: 1.8rem;
+}
+
+.mensaje .eleccion {
+    color: var(--clr-blue);
+    background-color: var(--clr-light);
+    border-radius: .5rem;
+    padding: 0 .25rem;
+}
+
+.btn {
+    border: 0;
+    line-height: 1;
+    background-color: var(--clr-light);
+    color: var(--clr-blue);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: .5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.disabled { /* para todo lo que quiera ocultar en JS */
+    display: none;
+}
+
